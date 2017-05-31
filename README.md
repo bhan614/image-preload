@@ -1,11 +1,11 @@
 # 图片预加载
 浏览前预加载图片，使用jquery封装插件，其中有三个实例展示。
 
--图片无序预加载，翻页展示，loading显示百分比进度
--qq表情无序预加载，打开展示，显示loading
--漫画有序预加载，翻页展示
+- 图片无序预加载，翻页展示，loading显示百分比进度
+- qq表情无序预加载，打开展示，显示loading
+- 漫画有序预加载，翻页展示
 
-## 初始化代码
+### 初始化代码
 ``` bash
 function PreLoad(imgs, options) {
   this.imgs = (typeof imgs === 'string') ? [imgs] : imgs;
@@ -23,8 +23,7 @@ PreLoad.DEFAULTS = {
 };
 ```
 
-## 无序预加载代码
-
+### 无序预加载代码
 ``` bash
 PreLoad.prototype._unordered = function(){
   var imgs = this.imgs,
@@ -48,8 +47,7 @@ PreLoad.prototype._unordered = function(){
 };
 ```
 
-## 有序预加载代码
-
+### 有序预加载代码
 ``` bash
 PreLoad.prototype._ordered = function() {
   var opts = this.opts,
@@ -75,8 +73,7 @@ PreLoad.prototype._ordered = function() {
 }
 ```
 
-## 扩展方法
-
+### 扩展方法
 ``` bash
 $.extend({
   preload: function(imgs, opts) {
@@ -85,8 +82,7 @@ $.extend({
 });
 ```
 
-## 调用
-
+### 调用
 ``` bash
 $.preload(imgs,{
   order: '',
